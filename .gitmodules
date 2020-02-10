@@ -1,0 +1,12 @@
+[submodule "NFC-Adafruit-SimpleRead/lib/NFCWrapper"]
+	path = NFC-Adafruit-SimpleRead/lib/NFCWrapper
+	url = https://github.com/DudleySmith/NFCWrapper.git
+[submodule "NFC-Adafruit-ReadTagToMillumin-Rough/lib/NFCWrapper"]
+	path = NFC-Adafruit-ReadTagToMillumin-Rough/lib/NFCWrapper
+	url = https://github.com/DudleySmith/NFCWrapper.git
+[submodule "NFC-Adafruit-ReadTagToMillumin/lib/NFCWrapper"]
+	path = NFC-Adafruit-ReadTagToMillumin/lib/NFCWrapper
+	url = https://github.com/DudleySmith/NFCWrapper.git
+[submodule "NFC-Adafruit-FormatAndWriteTag/lib/NFCWrapper"]
+	path = NFC-Adafruit-FormatAndWriteTag/lib/NFCWrapper
+	url = https://github.com/DudleySmith/NFCWrapper.git
