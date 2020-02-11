@@ -1,11 +1,11 @@
-#include "NCNS-NFCWrapper.h"
+#include "NFCWrapper.h"
 
 /* -------------------------------------
     Author : Sebastien Albert
     Date created : 2017/09/05
 
     5/9/17 : First steps with NFC Wrapper
-    
+
 */
 
 NFCMifareWrapper NfcWrapper;
@@ -32,7 +32,7 @@ void loop() {
     Serial.println("-------------------------------------------------------");
     Serial.print("Sentence read on sector 4 : ");
     Serial.println(valueString);
-    
+
     Serial.print(millis());
     Serial.print(" : Nb Reads=");
     Serial.println(String(++nbReads, DEC));

@@ -4,12 +4,8 @@
 */
 
 #include <Arduino.h>
-//#include "NCNS-ArduinoTools.h"
-
-#define CTRL_LED 13
-
 // NFC Dependencies ----------------------------
-#include "NCNS-NFCWrapper.h"
+#include "NFCWrapper.h"
 
 NFCMifareWrapper NfcWrapper;
 
@@ -29,10 +25,10 @@ void NFCInit() {
 // Reads the tag and return the size of
 // ------------------------------------------------------------
 char nfcGetNewTag() {
-  
+
   char newTag = TAGR_EMPTY;
-  
-  if (NfcWrapper.isTagPresent()) {  
+
+  if (NfcWrapper.isTagPresent()) {
     String valueString = NfcWrapper.readMifareBlock(4);
     if (valueString.length() > 0) {
       newTag = valueString.charAt(0);
@@ -40,4 +36,5 @@ char nfcGetNewTag() {
   }
 
   return newTag;
+
 }
