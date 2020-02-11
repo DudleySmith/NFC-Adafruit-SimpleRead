@@ -1,5 +1,6 @@
 #include <Arduino.h>
 #include <EEPROMWrapper.h>
+#include <Tags.h>
 
 void setup() {
 
@@ -26,35 +27,35 @@ void loop() {
 
     if(charRead == '1'){
       // Write ID
-      writeString(0, "COCO");readMe();
+      writeString(0, BOARD_NAME_COCO);readMe();
 
     }else if (charRead == '2') {
       // Write ID
-      writeString(0, "PRLV");readMe();
+      writeString(0, BOARD_NAME_PRLV);readMe();
 
     }else if (charRead == '3') {
       // Write ID
-      writeString(0, "PYRO");readMe();
+      writeString(0, BOARD_NAME_PYRO);readMe();
 
     }else if (charRead == '4') {
       // Write ID
-      writeString(0, "COEU");readMe();
+      writeString(0, BOARD_NAME_COEU);readMe();
 
     }else if (charRead == '5') {
       // Write ID
-      writeString(0, "CAGE");readMe();
+      writeString(0, BOARD_NAME_CAGE);readMe();
 
     }else if (charRead == '6') {
       // Write ID
-      writeString(0, "ISOC");readMe();
+      writeString(0, BOARD_NAME_ISOC);readMe();
 
     }else if (charRead == '7') {
       // Write ID
-      writeString(0, "BIPD");readMe();
+      writeString(0, BOARD_NAME_BIPD);readMe();
 
     }else if (charRead == '8') {
       // Write ID
-      writeString(0, "COLN");readMe();
+      writeString(0, BOARD_NAME_COLN);readMe();
 
     }else if (charRead == '?') {
       readMe();
