@@ -30,6 +30,8 @@ void setup() {
   NfcWrapper.setup();
   // NFCInit();
 
+  cnamGame.setup();
+
 }
 
 // NO TAG !
@@ -61,11 +63,14 @@ void redLights(){
   // Red off
   digitalWrite(PIN_RED_LIGHT,   LOW);
 
-  Serial.println("Bade answer !!! Say Boo !!! --------");
+  Serial.println("Bad answer !!! Say Boo !!! --------");
 
 }
 
 void loop() {
+
+  Serial.print("Board name : ");
+  Serial.println(cnamGame.boardName());
 
   if (NfcWrapper.isTagPresent()) {
     // We got a tag, ask an answer

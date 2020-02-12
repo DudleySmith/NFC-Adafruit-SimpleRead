@@ -6,31 +6,15 @@
 
 class CnamGame{
 
-  public:
-    bool isTagOk(String tag){
+public:
+  bool isTagOk(String tag);
+  void setup();
+  String boardName();
 
-      // DEBUG CARD -------------------------------------------------------
-      // Green = OK
-      if(tag.startsWith(TAG_DGBOK)){
-        return true;
-      }
-
-      // REd = KO
-      if(tag.startsWith(TAG_DGBKO)){
-        return false;
-      }
-
-      String boardName = readString(0);
-      Serial.println(boardName);
-
-      //if(boardName.startsWith(BOARD_NAME_COCO))
-
-      return false;
-
-    };
+private:
+  bool sendAndLog(String boardName, String tag, bool answer);
+  String _boardName;
 
 };
-
-
 
 #endif /* end of include guard: cnam_game */
