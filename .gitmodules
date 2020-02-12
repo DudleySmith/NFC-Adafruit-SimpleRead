@@ -1,0 +1,3 @@
+[submodule "Commons/NFCWrapper"]
+	path = Commons/NFCWrapper
+	url = https://github.com/DudleySmith/NFCWrapper.git
