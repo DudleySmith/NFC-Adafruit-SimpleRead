@@ -1,6 +1,8 @@
 #ifndef TAGS
 #define TAGS
 
+#include <Arduino.h>
+
 // Debug cards
 static const String TAG_DGBOK = "DGBOK"; // This card flashe the lights as OK
 static const String TAG_DGBKO = "DGBKO"; // This card flashes the lights as NOT OK
