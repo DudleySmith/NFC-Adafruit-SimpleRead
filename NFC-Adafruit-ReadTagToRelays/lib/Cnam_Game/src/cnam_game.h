@@ -12,7 +12,7 @@ public:
   String boardName();
 
 private:
-  bool sendAndLog(String boardName, String tag, bool answer);
+  void logAnswer(String boardName, String tag, bool answer);
   String _boardName;
 
 };

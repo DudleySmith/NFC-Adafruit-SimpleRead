@@ -79,11 +79,18 @@ void loop() {
     Serial.print("Tag present : ");
     Serial.println(valueString);
 
-    if(cnamGame.isTagOk(valueString) == true){
-      greenLights();
+    if(valueString != ""){
+      if(cnamGame.isTagOk(valueString) == true){
+        greenLights();
+      }else{
+        redLights();
+      }
+
     }else{
-      redLights();
+      lightsShutOff();
+      
     }
+
 
   }else{
     lightsShutOff();

@@ -4,13 +4,13 @@
 #include <Arduino.h>
 
 // Debug cards
-static const String TAG_DGBOK = "DGBOK"; // This card flashe the lights as OK
-static const String TAG_DGBKO = "DGBKO"; // This card flashes the lights as NOT OK
+static const String TAG_DGBOK = "DBGOK"; // This card flashe the lights as OK
+static const String TAG_DGBKO = "DBGKO"; // This card flashes the lights as NOT OK
 // Figurines
 static const String TAG_ROBOT = "ROBOT";
 static const String TAG_THERM = "THERM";
 static const String TAG_BOULI = "BOULI";
-static const String TAG_LOUPE = "LOUPE";
+static const String TAG_JUMEL = "JUMEL";
 static const String TAG_AMPUL = "AMPUL";
 static const String TAG_COCOT = "COCOT";
 static const String TAG_POMPE = "POMPE";

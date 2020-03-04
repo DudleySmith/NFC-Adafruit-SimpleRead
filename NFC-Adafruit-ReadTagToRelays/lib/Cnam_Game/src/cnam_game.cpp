@@ -11,15 +11,17 @@ String CnamGame::boardName(){
 
 bool CnamGame::isTagOk(String tag){
 
+  bool answer = false;
+
   // DEBUG CARD -------------------------------------------------------
   // Green = OK
   if(tag.startsWith(TAG_DGBOK)){
-    return true;
+    answer = true;
   }
 
   // REd = KO
   if(tag.startsWith(TAG_DGBKO)){
-    return false;
+    answer = false;
   }
 
   /*
@@ -29,63 +31,68 @@ bool CnamGame::isTagOk(String tag){
   if (_boardName.startsWith(BOARD_NAME_BIPD)){
     // --
     if(tag.startsWith(TAG_ROBOT)){
-      return sendAndLog(_boardName, tag, true);
+      answer = true;
     }
 
   }else if (_boardName.startsWith(BOARD_NAME_COLN)){
     // --
-    if(tag.startsWith(TAG_LOUPE)){
-      return sendAndLog(_boardName, tag, true);
+    if(tag.startsWith(TAG_JUMEL)){
+      answer = true;
     }
 
   }else if (_boardName.startsWith(BOARD_NAME_COCO)){
     // --
     if(tag.startsWith(TAG_COCOT)){
-      return sendAndLog(_boardName, tag, true);
+      answer = true;
     }
 
   }else if (_boardName.startsWith(BOARD_NAME_PRLV)){
     // --
     if(tag.startsWith(TAG_SERIN)){
-      return sendAndLog(_boardName, tag, true);
+      answer = true;
     }
 
   }else if (_boardName.startsWith(BOARD_NAME_PYRO)){
     // --
     if(tag.startsWith(TAG_THERM)){
-      return sendAndLog(_boardName, tag, true);
+      answer = true;
     }
 
   }else if (_boardName.startsWith(BOARD_NAME_COEU)){
     // --
     if(tag.startsWith(TAG_POMPE)){
-      return sendAndLog(_boardName, tag, true);
+      answer = true;
     }
 
   }else if (_boardName.startsWith(BOARD_NAME_CAGE)){
     // --
     if(tag.startsWith(TAG_BOULI)){
-      return sendAndLog(_boardName, tag, true);
+      answer = true;
     }
 
   }else if (_boardName.startsWith(BOARD_NAME_ISOC)){
     // --
     if(tag.startsWith(TAG_PHOTO)){
-      return sendAndLog(_boardName, tag, true);
+      answer = true;
     }
 
   }
 
-  return sendAndLog(_boardName, tag, false);
+  if(answer == true){
+    Serial.print("FOUND : ");
+  }else{
+    Serial.print("NOT FOUND : ");
+  }
+  logAnswer(_boardName, tag, answer);
+
+  return answer;
 
 }
 
-bool CnamGame::sendAndLog(String _boardName, String tag, bool answer){
+void CnamGame::logAnswer(String _boardName, String tag, bool answer){
   Serial.print("Board is "); Serial.print(_boardName);
   Serial.print(" - Tag is "); Serial.print(tag);
-  Serial.print(" - Answer is "); Serial.println(answer);
-
-  return answer;
+  Serial.print(" - Answer is "); Serial.println(answer ? "TRUE" : "FALSE");
 
 }
 
